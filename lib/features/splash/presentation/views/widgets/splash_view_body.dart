@@ -15,6 +15,14 @@ class SplashViewBody extends StatelessWidget {
           AssetsData.booklyLogo,
           width: 250,
         ),
+        const SizedBox(
+          height: 40,
+        ),
+        const Text(
+          "Read Free Books",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 16),
+        ),
       ],
     );
   }
