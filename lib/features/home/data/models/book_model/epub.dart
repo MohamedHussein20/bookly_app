@@ -5,11 +5,11 @@ class Epub extends Equatable {
 
   const Epub({this.isAvailable});
 
-  factory Epub.fromBooksList(Map<String, dynamic> json) => Epub(
+  factory Epub.fromJson(Map<String, dynamic> json) => Epub(
     isAvailable: json['isAvailable'] as bool?,
   );
 
-  Map<String, dynamic> toBooksList() => {
+  Map<String, dynamic> toJson() => {
     'isAvailable': isAvailable,
   };
 

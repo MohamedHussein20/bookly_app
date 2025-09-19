@@ -6,14 +6,14 @@ class IndustryIdentifier extends Equatable {
 
   const IndustryIdentifier({this.type, this.identifier});
 
-  factory IndustryIdentifier.fromBooksList(Map<String, dynamic> json) {
+  factory IndustryIdentifier.fromJson(Map<String, dynamic> json) {
     return IndustryIdentifier(
       type: json['type'] as String?,
       identifier: json['identifier'] as String?,
     );
   }
 
-  Map<String, dynamic> toBooksList() => {
+  Map<String, dynamic> toJson() => {
     'type': type,
     'identifier': identifier,
   };
