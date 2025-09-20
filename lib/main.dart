@@ -34,7 +34,7 @@ class BooklyApp extends StatelessWidget {
             HomeRepositoryImpl(
               ApiService(Dio()),
             ),
-          ),
+          )..fetchNewestBooks(),
         ),
       ],
       child: MaterialApp.router(
