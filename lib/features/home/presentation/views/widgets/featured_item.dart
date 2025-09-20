@@ -1,8 +1,8 @@
-import 'package:bookly_app/core/utils/assets.dart';
 import 'package:flutter/material.dart';
 
 class FeaturedItem extends StatelessWidget {
-  const FeaturedItem({super.key});
+  const FeaturedItem({super.key, required this.imageUrl});
+  final String imageUrl;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -12,8 +12,8 @@ class FeaturedItem extends StatelessWidget {
         child: Container(
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
-            image: const DecorationImage(
-              image: AssetImage(AssetsData.testImage),
+            image: DecorationImage(
+              image: NetworkImage(imageUrl),
               fit: BoxFit.fill,
             ),
           ),
