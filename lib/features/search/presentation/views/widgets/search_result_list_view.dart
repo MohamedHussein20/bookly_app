@@ -1,4 +1,3 @@
-import 'package:bookly_app/features/home/presentation/views/widgets/newest_books_item.dart';
 import 'package:flutter/material.dart';
 
 class SearchResultListView extends StatelessWidget {
@@ -10,7 +9,8 @@ class SearchResultListView extends StatelessWidget {
       child: ListView.builder(
         itemCount: 10,
         itemBuilder: (context, index) {
-          return const NewestBooksItem();
+          const Text("Test");
+          return null;
         },
       ),
     );

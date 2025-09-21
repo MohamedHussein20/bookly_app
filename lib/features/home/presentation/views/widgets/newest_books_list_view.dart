@@ -12,9 +12,9 @@ class NewestBooksListView extends StatelessWidget {
       builder: (context, state) {
         if (state is NewestBooksSuccess) {
           return SliverList.builder(
-            itemCount: 10,
+            itemCount: state.books.length,
             itemBuilder: (context, index) {
-              return const NewestBooksItem();
+              return NewestBooksItem(book: state.books[index],);
             },
           );
         } else if (state is NewestBooksFailure) {
