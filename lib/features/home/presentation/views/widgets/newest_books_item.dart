@@ -26,7 +26,7 @@ class NewestBooksItem extends StatelessWidget {
               AspectRatio(
                 aspectRatio: 5 / 8,
                 child: CachedNetworkImage(
-                  imageUrl: book.volumeInfo.imageLinks.thumbnail,
+                  imageUrl: book.volumeInfo.imageLinks?.thumbnail??'',
                   fit: BoxFit.fill,
                   placeholder: (context, url) => const Center(
                     child: CircularProgressIndicator(),
@@ -43,7 +43,7 @@ class NewestBooksItem extends StatelessWidget {
                     SizedBox(
                       width: MediaQuery.of(context).size.width * 0.5,
                       child: Text(
-                        book.volumeInfo.title!,
+                        book.volumeInfo.title ?? "No title",
                         style: Styles.textStyle20.copyWith(
                           fontFamily: kGtSectraFine,
                         ),
@@ -55,8 +55,10 @@ class NewestBooksItem extends StatelessWidget {
                       height: 3,
                     ),
                     Text(
-                      book.volumeInfo.authors![0],
+                      book.volumeInfo.authors?[0] ?? "",
                       style: Styles.textStyle14,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(
                       height: 3,

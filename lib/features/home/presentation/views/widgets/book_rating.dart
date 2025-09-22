@@ -7,7 +7,7 @@ class BookRating extends StatelessWidget {
     super.key,
     this.mainAxisAlignment = MainAxisAlignment.start, required this.rating, required this.count,
   });
-  final int rating;
+  final double rating;
   final int count;
   final MainAxisAlignment mainAxisAlignment;
   @override
